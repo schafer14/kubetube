@@ -1,0 +1,33 @@
+<div class="header">
+	<h1 class="site-title">{{ .Site.Title }}</h1>
+	<div class="site-description">
+		{{- if isset .Site.Params "subtitle" -}}
+		<h2>{{ .Site.Params.Subtitle | markdownify }}</h2>
+		{{- end -}}
+		<nav class="nav social">
+			<ul class="flat">
+				{{- range $index, $key := .Site.Params.Social -}}
+				<a href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
+				{{- end -}}
+			</ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			{{ range .Site.Menus.main }}
+			<li>
+				<a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+			</li>
+			{{ end }}
+		</ul>
+		<div class="dropdown language-select">
+			<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ .Site.Language.LanguageName }} </button> 
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				{{ range $.Site.Home.AllTranslations }}
+					<option><a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></option>
+				{{ end }}
+			</div>
+		</div>
+	</nav>
+</div>
