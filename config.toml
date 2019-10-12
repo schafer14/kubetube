@@ -1,0 +1,86 @@
+baseURL = "https://www.kubetube.com/"
+theme ="ezhil"
+description = "Videos and blogs on Kubernetes and Go."
+copyright = "Banner B. Schafer"
+
+[languages]
+  [languages.en]
+    title = "Kubetube"
+    weight = 1
+    languageName = "English"
+  [languages.es]
+    title = "Le Kubetube"
+    weight = 2
+    languageName = "Español"
+  [languages.zh]
+    title = "Le Kubetube"
+    weight = 3
+    languageName = "中文"
+  [languages.jp]
+    title = "Le Kubetube"
+    weight = 4
+    languageName = "日本語"
+  [languages.vi]
+    title = "Le Kubetube"
+    weight = 5
+    languageName = "Tiếng Việt"
+
+
+# Enable syntax highlighting.
+pygmentsstyle = "vs"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+# Your Google analytics code.
+googleAnalytics = "UA-123-45"
+
+# Number of posts to show in recent posts list (Optional). Defaults to 10.
+paginate = 10
+
+[params]
+    # Blog subtitle which appears below blog title. Supports markdown.
+    subtitle = "Videos and blogs on Kubernetes and Go."
+    # Content types which are included in home page recent posts list.
+    mainSections = ["posts"]
+    # If social media links are enabled then enable this to fetch icons from CDN instead of hosted on your site.
+    featherIconsCDN = true
+    # Specify favicon (icons/i.png maps to static/icons/i.png). No favicon if not defined.
+    favicon = "icons/myicon.png"
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Videos"
+url = "/videos"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+[[menu.main]]
+name = "Contributing"
+url = "/contributing"
+weight = 5
+
+# Social media links which shows up on site header.
+# Uses feather icons for icons. You can [search icon names from here](https://feathericons.com/).
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/schafer14/kubetube"
+
+# Enable tags.
+[taxonomies]
+   tag = "tags"
+
